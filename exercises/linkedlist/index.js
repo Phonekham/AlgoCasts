@@ -65,6 +65,14 @@ class LinkedList {
     }
     previous.next = null;
   }
+  insertLast(data) {
+    const last = this.getLast();
+    if (last) {
+      last.next = new Node(data);
+    } else {
+      this.head = new Node(data);
+    }
+  }
 }
 
 const nodeOne = new Node(5);
